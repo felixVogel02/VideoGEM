@@ -292,7 +292,7 @@ def parse_sentence(nlp, text, mode=2):
                     Only output one element in the format of ['<action>', '<object>']. If there is no action replace <action> by ''.\
                     If there is no object replace <object> by ''."
         
-        co = cohere.Client("5mhSgXFcWe4rZBDtNK0W0cMcbkUDWG7WPlh1zzLd")
+        co = cohere.Client("MY_KEY")
         response = co.chat(
             message=template.format(text)
         )  # Should output a list.
