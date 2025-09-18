@@ -193,55 +193,6 @@ class groundingYoutube_dataset_Video(Dataset):
         return len(self.data)
 
     def __getitem__(self, index):
-        
-        
-        # "-2TGG1WFF3A/284"  # Note the saved image has +1 for the frame number!!!
-        # "-2TGG1WFF3A/448"
-        # "-5m_16X3IMo/79"
-        
-        # Also good images:
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/-_9E7vmxi4o_897-A_photo_of_a_person_flip_pancake..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/-q5MfvBP9RE_95-A_photo_of_a_person_crack_egg..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/-q5MfvBP9RE_194-A_photo_of_a_person_flip_egg..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/-q5MfvBP9RE_266-A_photo_of_a_person_assemble_sandwich..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/01FLJjr-vJM_51-A_photo_of_a_person_mash_banana..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/01FLJjr-vJM_96-A_photo_of_a_person_spread_butter..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/01FLJjr-vJM_92-A_photo_of_a_person_spread_butter..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/01FLJjr-vJM_103-A_photo_of_a_person_fry_pancake..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/01FLJjr-vJM_100-A_photo_of_a_person_add_mixture..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/04sDcaLeEjE_151-A_photo_of_a_person_roll_up..png
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/0GGOV4f7mKQ_51-A_photo_of_a_person_heat_pan..png
-        
-        # Only for visualization.
-        # index = 0
-        # while True:
-        #     elm = self.data[index]
-        #     if elm["vid"] == "PzLb9Pc6q1o":
-        #         if elm["second"] == 289:
-        #             break
-        #     index += 1
-        # while True:
-        #     if "-5m_16X3IMo/79" in self.data[index]["image_path"]:
-        #         break
-            
-            
-            # if "01FLJjr-vJM/102" in self.data[index]["image_path"]:
-            #     break
-            # if "-2TGG1WFF3A/448" in self.data[index]["image_path"]:
-            #     break
-            # if "-5m_16X3IMo/79" in self.data[index]["image_path"]:
-            #     break
-            
-            
-            
-            # if "-2TGG1WFF3A/284" in self.data[index]["image_path"]:
-            #     break
-            # if "-2TGG1WFF3A/448" in self.data[index]["image_path"]:
-            #     break
-            # if "-5m_16X3IMo/79" in self.data[index]["image_path"]:
-            #     break
-            # index += 1
-        # index = index+950
 
         video = self.data[index]
         vid = video["vid"]
@@ -330,7 +281,6 @@ class groundingYoutube_dataset(Dataset):
 
     def __getitem__(self, index):
         
-        # index = index + 750
         
         video = self.data[index]
         vid = video["vid"]
@@ -414,13 +364,6 @@ class youCookInteractions_dataset_Video(Dataset):
         return len(self.data)
     
     def __getitem__(self, index):
-        
-        # index = index +200
-        # /data1/felix/master_thesis_plots/final_images/viclip_vid_grounding_youtube/T_fPNAK5Ecg_472-A_photo_of_a_person_add_butter_and_milk_to_the_mashed_potatoes_and_mix..png
-        # while True:
-        #     if "T_fPNAK5Ecg/473" in self.data[index]["image_path"]:
-        #         break
-        #     index += 1
         
         video = self.data[index]
         vid = video["vid"]
@@ -671,27 +614,7 @@ class vhico_dataset_video(Dataset):
     def __len__(self):
         return len(self.img_labels)
 
-    def __getitem__(self, idx):
-        # For visualization
-        # getty-man-using-board-and-box-method-to-catch-gobies-and-fish-on-mudflat-video-id504531797_14.mp4/67
-        # yt-lIucFFQivsE_9
-        # yt-sSutdGZ1vEs_33
-        
-        #'test/catching/getty-man-using-board-and-box-method-to-catch-gobies-and-fish-on-mudflat-video-id504531797_14.mp4/47.jpg'
-        # 'test/catching/getty-man-using-board-and-box-method-to-catch-gobies-and-fish-on-mudflat-video-id504531797_14.mp4/67.jpg'
-        # while True:
-        #     # print(self.img_labels[idx]["path"])
-        #     # a = self.img_labels[idx]["path"]
-        #     # if "getty-man-using-board-and-box-method-to-catch-gobies-and-fish-on-mudflat-video-id504531797_14.mp4/67" in self.img_labels[idx]["path"]:
-        #     #     break
-        #     # if "yt-sSutdGZ1vEs_33" in self.img_labels[idx]["path"]:
-        #     #     break
-        #     if "yt-lIucFFQivsE_9" in self.img_labels[idx]["path"]:
-        #         break
-        #     idx += 1
-        
-        # idx = idx+10
-            
+    def __getitem__(self, idx):            
             
         img_path = os.path.join(self.img_dir, self.img_labels[idx]["path"])
         img_class = self.img_labels[idx]["class"]

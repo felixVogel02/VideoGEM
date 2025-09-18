@@ -1,5 +1,5 @@
 import torch
-import gem
+import videogem
 import requests
 from PIL import Image
 import numpy as np
@@ -46,7 +46,7 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     template="A person {}"  #"A photo of {}."
     # init model and image transform
-    preprocess = gem.get_gem_img_transform()
+    preprocess = videogem.get_gem_img_transform()
     
     
     
